@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/LD2343/Jenkins_repo' 
+                git branch: 'main', url: 'https://github.com/LD2343/Armageddeon-Jenkins-Test' 
             }
         }
         stage('Initialize Terraform') {
