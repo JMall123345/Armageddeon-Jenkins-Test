@@ -1,6 +1,6 @@
 resource "aws_launch_template" "nvirginia_LT" {
   name_prefix   = "nvirginia_LT"
-  image_id      = "ami-01816d07b1128cd2d"  
+  image_id      = "ami-0c614dee691cbbf37"  
   instance_type = "t2.micro"
 
   key_name = "NVirginiaLinux"
@@ -69,7 +69,7 @@ resource "aws_launch_template" "nvirginia_LT" {
 
 /*resource "aws_launch_template" "app2_LT_443" {
   name_prefix   = "app2_LT_443"
-  image_id      = "ami-012967cc5a8c9f891"  
+  image_id      = "ami-0c614dee691cbbf37"  
   instance_type = "t2.micro"
 
   key_name = "MyLinuxBox"
