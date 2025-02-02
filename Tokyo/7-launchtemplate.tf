@@ -1,6 +1,6 @@
 resource "aws_launch_template" "tokyo_LT" {
   name_prefix   = "tokyo_LT"
-  image_id      = "ami-0ab02459752898a60"  
+  image_id      = "ami-06c6f3fa7959e5fdd"  
   instance_type = "t2.micro"
 
   key_name = "ToykoLinux"
@@ -69,7 +69,7 @@ resource "aws_launch_template" "tokyo_LT" {
 
 /*resource "aws_launch_template" "app2_LT_443" {
   name_prefix   = "app2_LT_443"
-  image_id      = "ami-012967cc5a8c9f891"  
+  image_id      = "ami-06c6f3fa7959e5fdd"  
   instance_type = "t2.micro"
 
   key_name = "MyLinuxBox"
