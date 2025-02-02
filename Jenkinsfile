@@ -8,7 +8,7 @@ pipeline {
             steps {
                 withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding',
-                    credentialsId: 'Class6JenkinsAWS' 
+                    credentialsId: '88b5511a-8f42-426a-9a80-1ec5863fabd6'
                 ]]) {
                     sh '''
                     echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/LD2343/Armageddeon-Jenkins-Test' 
+                git branch: 'main', url: 'https://github.com/JMall123345/Armageddeon-Jenkins-Test' 
             }
         }
         stage('Initialize Terraform') {
@@ -33,7 +33,7 @@ pipeline {
             steps {
                 withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding',
-                    credentialsId: 'Class6JenkinsAWS'
+                    credentialsId: '88b5511a-8f42-426a-9a80-1ec5863fabd6'
                 ]]) {
                     sh '''
                     export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
@@ -48,7 +48,7 @@ pipeline {
                 input message: "Approve Terraform Apply?", ok: "Deploy"
                 withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding',
-                    credentialsId: 'Class6JenkinsAWS'
+                    credentialsId: '88b5511a-8f42-426a-9a80-1ec5863fabd6'
                 ]]) {
                     sh '''
                     export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
